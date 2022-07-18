@@ -4,13 +4,15 @@
 <div class="container py-4">
             <div class="row justify-content-center">
                 <div class="col">
-                    <h3>Data Pertanyaan dan Jawaban</h3>
-                    <p>Kelola data pertanyaan dan pilihan</p>
+                    <h3>Hasil Kuesioner</h3>
+                    <p>Kelola data hasil kuesioner</p>
                 </div>
             </div>
-            <div class="row justify-content-end">
-                <div class="col-3 mb-2 ms-auto">
-                    <button type="button" class="btn btn-primary"><i class="fa-solid fa-plus"></i>Tambah Pertanyaan Baru</button>
+            <div class="row justify-content-start">
+                <div class="col-3 mb-2 me-auto">
+                    <a href="/kuesioner-hasil">
+                        <button type="button" class="btn btn-primary"><i class="fa-solid fa-chevron-left"></i> Kembali</button>
+                    </a>
                 </div>
             </div>
 			<div class="card px-3 py-2">

@@ -28,17 +28,17 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house"></i> Home</a>
+                        <a class="nav-link " aria-current="page" href="#"><i class="fa-solid fa-house"></i> Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-graduation-cap"></i>
+                        <a class="nav-link {{ Route::is('data-prodi') ? 'active' : '' }}" href="{{url('/data-prodi')}}"><i class="fa-solid fa-graduation-cap"></i>
                             Data Prodi</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link {{ Route::is('input-kuesioner') ? 'active' : '' }}" href="{{url('/kuesioner-input')}}"><i class="fa-solid fa-gear"></i> Pertanyaan & Jawaban</a>
+                        <a class="nav-link {{ Route::is('input-kuesioner') ? 'active' : '' }}" href="{{url('/pertanyaan-list')}}"><i class="fa-solid fa-gear"></i> Pertanyaan & Jawaban</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link {{ Route::is('hasil-kuesioner') ? 'active' : '' }}" href="{{url('/kuesioner-detail')}}"><i class="fa-solid fa-people-group"></i> Hasil Kuesioner</a>
+                        <a class="nav-link {{ Route::is('hasil-kuesioner') ? 'active' : '' }}" href="{{url('/kuesioner-hasil')}}"><i class="fa-solid fa-people-group"></i> Hasil Kuesioner</a>
                       </li>
                     </ul>
 
@@ -50,7 +50,23 @@
 		<!-- End Content -->
 
 		<!-- Optional JavaScript; choose one of the two! -->
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>
+            $('thead').on('click','.addRow',function(){
+                var tr = "<tr>"+
+                  "<td><input type='text' name='jawban[]' class='form-control'></td>" +
+                  "<th><a href='javascript:void(0)' class='btn btn-danger deleteRow'>-</a></th>"+
+                "</tr>"+
+            $('tbody').append(tr);
+            });
 
+            $('tbody').on('click','.deleteRow',function(){
+                $(this).parent().parent().remove();
+            });
+        </script>
 		<!-- Option 1: Bootstrap Bundle with Popper -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
