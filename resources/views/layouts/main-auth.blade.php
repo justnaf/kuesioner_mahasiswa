@@ -25,7 +25,7 @@
         <section>
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div class="container-fluid px-5">
-                    <a class="navbar-brand" href="#"><b>KUESIONER MAHASISWA</b></a>
+                    <a class="navbar-brand" href="/"><b>KUESIONER MAHASISWA</b></a>
                     <button
                         class="navbar-toggler"
                         type="button"

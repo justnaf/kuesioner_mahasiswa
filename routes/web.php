@@ -19,3 +19,10 @@ Route::get('/', function () {
 Route::get('/survey',function(){
     return view('survey');
 })->name('survey');
+
+Route::get('/kuesioner-input', function(){
+    return view('/kuesioner/index');
+})->name('input-kuesioner');
+Route::get('/kuesioner-detail', function(){
+    return view('/kuesioner/detail-hasil');
+})->name('hasil-kuesioner');
