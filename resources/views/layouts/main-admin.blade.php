@@ -24,7 +24,7 @@
 		<!-- Navbar -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 			<div class="container-fluid px-5">
-				<a class="navbar-brand" href="#"><b>KUESIONER MAHASISWA</b></a>
+				<a class="navbar-brand" href="/"><b>{{ env('APP_NAME') }}</b></a>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                       <li class="nav-item">
